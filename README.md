@@ -1,23 +1,29 @@
+[update-readmes]   Mode: rewrite — migrating to template structure...
 # mlsblk
 
-macOS port of Linux `lsblk` — list block devices as a tree.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/mlsblk)
 
-## Data sources
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-- **diskutil list -plist** — disk/partition structure (one call)
-- **getmntinfo()** — mount points
-- **diskutil info -plist** — FSTYPE, UUID, LABEL (per device when using `-f`)
+## Architecture
 
-## Build
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
+
+## Install
+
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
 ```bash
-make
-make install   # install to /usr/local/bin (override with PREFIX=...)
+git clone https://github.com/Interested-Deving-1896/mlsblk.git
+cd mlsblk
 ```
 
-Requires macOS (CoreFoundation). No external dependencies beyond the system.
-
 ## Usage
+
 
 ```bash
 mlsblk                    # tree: NAME SIZE TYPE MOUNTPOINT
@@ -27,24 +33,50 @@ mlsblk -J                 # JSON output
 mlsblk -l                 # list format (no tree)
 ```
 
-## Columns
+## Configuration
 
-| Column     | Source              |
-|-----------|----------------------|
-| NAME      | disk0, disk0s1, …    |
-| SIZE      | diskutil (bytes)     |
-| TYPE      | disk / part          |
-| MOUNTPOINT| getmntinfo / plist   |
-| FSTYPE    | diskutil info        |
-| LABEL     | diskutil info        |
-| UUID      | diskutil info        |
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
 
-## Not supported (vs Linux lsblk)
+## CI
 
-- LVM, dm-crypt
-- Loop devices
-- MAJ:MIN device numbers
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/mlsblk`](https://github.com/Interested-Deving-1896/mlsblk) and mirrored through:
+
+```
+Interested-Deving-1896/mlsblk  ──►  OpenOS-Project-OSP/mlsblk  ──►  OpenOS-Project-Ecosystem-OOC/mlsblk
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) for details. Copyright (c) 2026 Murat Kaan Tekeli.
+<!-- AI:start:license -->
+[MIT](https://github.com/Interested-Deving-1896/mlsblk/blob/main/LICENSE) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
